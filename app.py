@@ -43,15 +43,20 @@ def upload():
 
         if result < 0:
             result = 0
-            
+
         if result > 100:
             result = 100
 
+        # reverse result
+        # near 100 -- means best quality
+        # near 0   -- means low quality
+        result = (100 - result)
+        
         result=(str(result))
         return result
     return None
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
 
