@@ -1,0 +1,8 @@
+Flask==1.1.1
+Flask-RESTful==0.3.7
+
+Pillow==6.2.1
+
+image-quality
+
+# sentry-sdk[flask]==0.14.3
