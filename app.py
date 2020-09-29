@@ -41,6 +41,12 @@ def upload():
         img = PIL.Image.open(file_path)
         result=brisque.score(img)
 
+        if result < 0:
+            result = 0
+            
+        if result > 100:
+            result = 100
+
         result=(str(result))
         return result
     return None
